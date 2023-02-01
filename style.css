@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+
+    background: #F4E2C0;
+}
+
+#logo {
+    margin: 0;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 65px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+nav>ul {
+    list-style-type: none;
+}
+
+/* link:hover::after {
+    content: "/";?
+} */
+
+/*
+Parallax effect
+Container
+ height:100vh
+ overflow-y: auto
+ overflow-x: hidden
+ perspective 10px
+
+ container where the object is
+ transform-style: preserver-3d
+ z-index:-1
+
+ the parallax object
+ transform: translateZ(-10px) scale(2)
+
+ Explenation
+ The container has to be its own scroll to have the effect. 
+ The container where the object whill be needs to be behind the main content 
+ and have to keep the 3d perspective to work. 
+ The actual object has to be moved further back and the scale needs to be changed relative to 
+ the main container perspective number.
+ */

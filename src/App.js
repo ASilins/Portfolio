@@ -1,0 +1,17 @@
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from "./pages/Home"
+import UnderConstruction from './pages/underConstruction/UnderConstruction';
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<UnderConstruction />} />
+        <Route path='/home' element={<Home />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;

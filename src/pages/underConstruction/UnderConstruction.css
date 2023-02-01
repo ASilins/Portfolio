@@ -1,0 +1,32 @@
+#constructContainer {
+    height: 100vh;
+}
+
+#mainText {
+    width: 210px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 400px) {
+
+}
+
+@media only screen and (min-width: 480px) {
+  
+}
+
+@media only screen and (min-width: 740px) {
+    
+}
+
+@media only screen and (min-width: 840px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+}
