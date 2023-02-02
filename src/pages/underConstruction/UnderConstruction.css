@@ -3,9 +3,18 @@
 }
 
 #mainText {
-    width: 210px;
     margin: auto;
+    
+    width: 100%;
 }
+
+/* #mobile {
+    display: none;
+}
+
+#desktop {
+    display: none;
+} */
 
 @media only screen and (min-width: 400px) {
 
@@ -16,11 +25,13 @@
 }
 
 @media only screen and (min-width: 740px) {
-    
+    #oops {
+        text-align: right;
+    }
 }
 
 @media only screen and (min-width: 840px) {
-
+    
 }
 
 @media only screen and (min-width: 1024px) {
@@ -28,5 +39,7 @@
 }
 
 @media only screen and (min-width: 1440px) {
-
+    #oops {
+        text-align: center;
+    }
 }
