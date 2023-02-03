@@ -68,7 +68,6 @@ export const Image = ({
                     style={{
                         transform: `translate(0, ${ΔY}px)`,
                     }}
-                    loading="lazy"
                 />
             )}
             {Boolean(children) && <div className="image-content">{children}</div>}

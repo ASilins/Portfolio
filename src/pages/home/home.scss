@@ -1,0 +1,259 @@
+@use "../../css/media.scss";
+@import "../../css/grid.scss";
+@import "../../css/helpers.scss";
+
+#home1 {
+    min-height: 670px;
+    height: auto;
+    background: #F4E2C0;
+}
+
+#home-item-1 {
+    @include col-1-4;
+    @include row-3-1;
+
+    @include upper;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {}
+
+    @include media.min-width(ml) {
+        @include center-y-ML;
+
+        @include col-1-2-ML;
+        @include row-2-ML;
+    }
+
+    @include media.min-width(l) {
+        @include col-1-4-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-2-4-XL;
+    }
+}
+
+#home-item-2 {
+    img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    @include col-1-4;
+    @include row-5-2;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {
+        img {
+            max-width: 340px;
+        }
+    }
+
+    @include media.min-width(m) {
+        img {
+            max-width: 400px;
+        }
+
+        @include row-4-2-M;
+    }
+
+    @include media.min-width(ml) {
+        @include center-y-ML;
+        @include align-right-ML;
+
+        @include row-2-ML;
+        @include col-3-2-ML;
+
+        margin-top: 6.5vw;
+        margin-bottom: 6.5vw;
+    }
+
+
+    @include media.min-width(l) {
+        img {
+            max-width: 410px;
+        }
+
+        @include col-5-4-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-7-6-XL;
+    }
+}
+
+#home-item-3 {
+    @include upper;
+    @include underline;
+
+    @include col-1-4;
+    @include row-7-1;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {
+        @include row-6-1-M;
+    }
+
+    @include media.min-width(ml) {
+        @include align-right-ML;
+
+        @include row-4-1-ML;
+        @include col-3-2-ML;
+    }
+
+
+    @include media.min-width(l) {
+        @include col-5-4-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-9-4-XL;
+    }
+}
+
+#home-item-4 {
+    @include align-right;
+
+    @include col-1-4;
+
+    @include media.min-width(l) {
+        @include col-7-2-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-11-2-XL;
+    }
+}
+
+#home-item-5-6 {
+    h2 {
+        @include upper;
+    }
+
+    :nth-child(2) {
+        margin-top: 40px;
+    }
+
+    @include col-1-4;
+    @include row-2-3;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {
+        @include row-2-2-M;
+    }
+
+    @include media.min-width(ml) {
+        @include row-2-1-ML;
+    }
+
+    @include media.min-width(l) {
+        @include col-1-8-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-3-8-XL;
+    }
+}
+
+#home-item-7 {
+    @include col-1-3;
+    @include row-6-1;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {
+        @include col-1-2-M;
+        @include row-5-1-M;
+    }
+
+    @include media.min-width(ml) {
+        @include row-3-1-ML;
+
+        margin-top: 100px;
+    }
+
+    @include media.min-width(l) {
+        @include col-1-4-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-3-3-XL;
+    }
+}
+
+#home-item-8 {
+    @include align-right;
+    @include col-1-4;
+    @include row-7-1;
+
+    padding-left: 20px;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {
+        @include row-5-2-M;
+        @include col-3-2-M;
+    }
+
+    @include media.min-width(ml) {
+        @include row-3-1-ML;
+
+        padding-left: 0;
+        margin-top: 100px;
+    }
+
+    @include media.min-width(l) {
+        @include align-left-L;
+
+        @include col-5-4-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-8-3-XL;
+    }
+}
+
+#home-item-9 {
+    p {
+        @include underline;
+    }
+
+    @include align-right;
+    @include decoration-none;
+
+    @include col-3-2;
+    @include row-8-1;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {}
+
+    @include media.min-width(ml) {
+        @include row-4-1-ML;
+    }
+
+    @include media.min-width(l) {
+        @include col-5-4-L;
+        @include align-left-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-8-3-XL;
+    }
+}

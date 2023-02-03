@@ -1,0 +1,36 @@
+@use "../../css/media.scss";
+
+footer {
+    p {
+        margin: 30px 0;
+    }
+
+    font-weight: 700;
+
+    justify-content: space-between;
+    margin-left: 40px;
+
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {
+        p {
+            margin: 70px 0;
+        }
+
+        margin: 0 80px;
+        display: flex;
+    }
+
+    @include media.min-width(ml) {
+        margin: 0 100px;
+    }
+
+    @include media.min-width(l) {
+        margin: 0 140px;
+    }
+
+    @include media.min-width(xl) {}
+}
