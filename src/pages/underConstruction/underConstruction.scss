@@ -1,0 +1,73 @@
+@use "../../css/media.scss";
+@import "../../css/grid.scss";
+@import "../../css/helpers.scss";
+
+#constructContainer {
+    height: 100vh;
+}
+
+#logo {
+    @include col-1-2;
+    @include row-1;
+
+    @include media.min-width(m) {
+        @include col-1-M;
+        @include row-1-M;
+    }
+}
+
+#oops {
+    @include col-1-2;
+    @include row-3-1;
+
+    @include media.min-width(m) {
+        @include col-1-M;
+        @include align-right;
+    }
+
+    @include media.min-width(ml) {
+        @include row-2-1-ML;
+    }
+
+    @include media.min-width(l) {
+        @include col-1-2-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-2-2-XL;
+        @include center;
+    }
+}
+
+#mainText {
+    @include row-4-2;
+    @include col-1-4;
+
+    @include underline;
+    @include center;
+
+    margin: auto;
+
+    width: 100%;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {
+        @include col-2-2-M;
+        @include row-3-2-M;
+    }
+
+    @include media.min-width(ml) {
+        @include row-2-ML;
+    }
+
+    @include media.min-width(l) {
+        @include col-3-4-L;
+    }
+
+    @include media.min-width(xl) {
+        @include col-5-4-XL;
+    }
+}
