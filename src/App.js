@@ -9,6 +9,9 @@ function App() {
       <Routes>
         <Route path='/' element={<UnderConstruction />} />
         <Route path='/home' element={<Home />} />
+        <Route path="/work" element={<UnderConstruction />} />
+        <Route path="/about" element={<UnderConstruction />} />
+        <Route path="/contact" element={<UnderConstruction />} />
       </Routes>
     </>
   );

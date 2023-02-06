@@ -23,7 +23,7 @@ function Showcase(protos) {
             </div>
 
             <div id="sc-item-3">
-                <Image src={showcase.img} alt={showcase.alt} height="60vh" speed={0.8}>
+                <Image src={showcase.img} alt={showcase.alt} height="60vh" speed={0.4}>
                 </Image>
             </div>
         </div>

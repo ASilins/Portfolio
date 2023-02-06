@@ -11,13 +11,13 @@ function Header() {
             <nav id="desktop">
                 <ul>
                     <li>
-                        <Link className="nav-item" to="/" >Work</Link>
+                        <Link className="nav-item" to="/work" >Work</Link>
                     </li>
                     <li>
-                        <Link className="nav-item" to="/" >About</Link>
+                        <Link className="nav-item" to="/about" >About</Link>
                     </li>
                     <li>
-                        <Link className="nav-item" to="/" >Contact</Link>
+                        <Link className="nav-item" to="/contact" >Contact</Link>
                     </li>
                 </ul>
             </nav>

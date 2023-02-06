@@ -3,6 +3,7 @@ import Header from "../../components/header/Header";
 import imgArturs from "../../assets/arturs.jpg"
 import { Link } from "react-router-dom";
 import Showcase from "../../components/projectShowcase/Showcase";
+import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 
 function Home() {
@@ -18,7 +19,7 @@ function Home() {
                 </h1>
 
                 <div id="home-item-2">
-                    <img src={imgArturs} alt="Image of Arturs Silins" />
+                    <img src={imgArturs} alt="" />
                 </div>
                 <h1 id="home-item-3">
                     Arturs Silins
@@ -55,15 +56,19 @@ function Home() {
             </div>
 
             <div id="home3">
-                <div className="container">
-                    <h3 id="home-item-10">/02</h3>
-                    <h1 id="home-item-11">Work</h1>
+                <div id="work">
+                    <div id="home-item-10">
+                        <h3>/02</h3>
+                    </div>
+                    <div id="home-item-11">
+                        <h1>Work</h1>
+                    </div>
                 </div>
 
                 <Showcase id="1" />
-                <Showcase id="1" />
-                <Showcase id="1" />
             </div>
+
+            <Contact pageNumber="Contact /03" />
 
             <Footer />
         </>
