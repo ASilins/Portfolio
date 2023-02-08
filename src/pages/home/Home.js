@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import Showcase from "../../components/projectShowcase/Showcase";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+import PageNumber from "../../components/PageNumber";
 
 function Home() {
-    document.title = "Home";
+    document.title = "Arturs Silins | Home";
 
     return (
         <>
@@ -27,7 +28,10 @@ function Home() {
             </div>
 
             <div className="container">
-                <h3 id="home-item-4">About me /01</h3>
+
+                <PageNumber>
+                    <h3 >About me /01</h3>
+                </PageNumber>
 
                 <div id="home-item-5-6">
                     <h2>
@@ -50,16 +54,16 @@ function Home() {
                     I work on and use that knowledge in the next one.
                 </p>
 
-                <Link to="/" id="home-item-9">
+                <Link to="/about" id="home-item-9">
                     <p>More about me</p>
                 </Link>
             </div>
 
             <div id="home3">
                 <div id="work">
-                    <div id="home-item-10">
+                    <PageNumber id="home-item-10">
                         <h3>/02</h3>
-                    </div>
+                    </PageNumber>
                     <div id="home-item-11">
                         <h1>Work</h1>
                     </div>

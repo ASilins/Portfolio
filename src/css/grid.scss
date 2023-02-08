@@ -63,8 +63,73 @@
     grid-column: 1/ span 4;
 }
 
+@mixin col-1-6 {
+    grid-column: 1/ span 6;
+}
+
+@mixin col-1-7 {
+    grid-column: 1/ span 7;
+}
+
+@mixin col-1-8 {
+    grid-column: 1/ span 8;
+}
+
+@mixin col-1-12 {
+    grid-column: 1/ span 12;
+}
+
+@mixin col-2-2 {
+    grid-column: 2/ span 2;
+}
+
+@mixin col-2-3 {
+    grid-column: 2/ span 3;
+}
+
+@mixin col-2-4 {
+    grid-column: 2/ span 4;
+}
+
+@mixin col-2-8 {
+    grid-column: 2/ span 8;
+}
+
+@mixin col-2-9 {
+    grid-column: 2/ span 9;
+}
+
+@mixin col-2-10 {
+    grid-column: 2/ span 10;
+}
+
+
 @mixin col-3-2 {
     grid-column: 3/ span 2;
+}
+
+@mixin col-3-4 {
+    grid-column: 3/ span 4;
+}
+
+@mixin col-4-1 {
+    grid-column: 4/ span 1;
+}
+
+@mixin col-5-4 {
+    grid-column: 5/ span 4;
+}
+
+@mixin col-7-6 {
+    grid-column: 7/ span 6;
+}
+
+@mixin col-8-4 {
+    grid-column: 8/ span 4;
+}
+
+@mixin col-8-5 {
+    grid-column: 8/ span 5;
 }
 
 @mixin row-1 {
@@ -87,8 +152,16 @@
     grid-row: 2/ span 3;
 }
 
+@mixin row-2-7 {
+    grid-row: 2/ span 7;
+}
+
 @mixin row-3-1 {
     grid-row: 3/ span 1;
+}
+
+@mixin row-3-2 {
+    grid-row: 3/ span 2;
 }
 
 @mixin row-3-6 {
@@ -115,8 +188,16 @@
     grid-row: 6/ span 1;
 }
 
+@mixin row-6-2 {
+    grid-row: 6/ span 2;
+}
+
 @mixin row-7-1 {
     grid-row: 7/ span 1;
+}
+
+@mixin row-7-2 {
+    grid-row: 7/ span 2;
 }
 
 @mixin row-8-1 {

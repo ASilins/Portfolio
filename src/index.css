@@ -8,6 +8,10 @@
   color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background: #F4E2C0;
 }

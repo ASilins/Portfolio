@@ -10,11 +10,6 @@ footer {
     justify-content: space-between;
     margin-left: 40px;
 
-
-    @include media.min-width(s) {}
-
-    @include media.min-width(ms) {}
-
     @include media.min-width(m) {
         p {
             margin: 70px 0;
@@ -32,5 +27,7 @@ footer {
         margin: 0 140px;
     }
 
-    @include media.min-width(xl) {}
+    @include media.min-width(xl) {
+        margin: 0 240px;
+    }
 }
