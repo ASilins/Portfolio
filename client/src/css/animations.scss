@@ -1,0 +1,74 @@
+.textAnimation {
+    opacity: 0;
+    display: inline-block;
+    animation-name: textAnimation;
+    animation-duration: 2s;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+
+    // For development
+    // animation-iteration-count: infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) skewX(0);
+    }
+}
+
+.headerAnimation {
+    display: inline-block;
+
+    span {
+        opacity: 0;
+
+        display: inline-block;
+        white-space: pre;
+
+        animation-name: headerAnimation;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes headerAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.numberAnimation {
+    opacity: 0;
+    display: inline-block;
+    animation-name: numberAnimation;
+    animation-duration: 2s;
+    animation-delay: 800ms;
+    animation-fill-mode: forwards;
+
+    // For development
+    // animation-iteration-count: infinite;
+}
+
+@keyframes numberAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) skewX(0);
+    }
+}

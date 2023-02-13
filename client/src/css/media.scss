@@ -1,0 +1,75 @@
+$breakpoint-small: 400px;
+$breakpoint-medium-small: 480px;
+$breakpoint-medium: 740px;
+$breakpoint-medium-large: 840px;
+$breakpoint-large: 1024px;
+$breakpoint-extra-large: 1440px;
+
+@mixin min-width($breakpoint) {
+
+    @if ($breakpoint ==s) {
+        @media (min-width: $breakpoint-small) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==ms) {
+        @media (min-width: $breakpoint-medium-small) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==m) {
+        @media (min-width: $breakpoint-medium) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==ml) {
+        @media (min-width: $breakpoint-medium-large) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==l) {
+        @media (min-width: $breakpoint-large) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==xl) {
+        @media (min-width: $breakpoint-extra-large) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+    }
+}
+
+/* 
+@include media.min-width(s) {
+
+}
+
+@include media.min-width(ms) {
+
+}
+
+@include media.min-width(m) {
+
+}
+
+@include media.min-width(ml) {
+
+}
+
+@include media.min-width(l) {
+
+}
+
+@include media.min-width(xl) {
+
+}
+*/

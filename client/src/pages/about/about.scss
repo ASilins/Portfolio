@@ -1,0 +1,97 @@
+@use "../../css/media.scss";
+@import "../../css/grid.scss";
+@import "../../css/helpers.scss";
+
+#aboutTop {
+    padding-top: 30vh;
+    height: 140vh;
+
+    #item-1 {
+        @include col-1-4;
+        @include row-3-1;
+
+        @include media.min-width(m) {
+            @include row-2-1;
+        }
+
+        @include media.min-width(ml) {}
+
+        @include media.min-width(l) {
+            @include col-1-8;
+        }
+
+        @include media.min-width(xl) {
+            @include col-2-10;
+        }
+    }
+
+    #item-2 {
+        @include col-1-4;
+        @include row-4-1;
+
+        @include media.min-width(m) {
+            @include row-3-1;
+        }
+
+        @include media.min-width(ml) {
+            @include row-2-1;
+
+            margin-top: auto;
+        }
+
+        @include media.min-width(l) {}
+
+        @include media.min-width(xl) {
+            @include col-2-3;
+        }
+    }
+
+    #item-3 {
+        @include row-5-2;
+        @include col-2-3;
+
+        @include media.min-width(m) {
+            @include col-3-2;
+            @include row-4-2;
+        }
+
+        @include media.min-width(ml) {
+            @include row-3-1;
+        }
+
+        @include media.min-width(l) {
+            @include col-5-4;
+        }
+
+        @include media.min-width(xl) {
+            @include col-8-4;
+        }
+    }
+
+    #item-4 {
+        @include col-2-3;
+        @include row-7-1;
+
+        @include media.min-width(m) {
+            @include col-3-2;
+            @include row-5-2;
+
+            display: flex;
+            align-items: center;
+        }
+
+        @include media.min-width(ml) {
+            @include row-4-1;
+
+            display: block;
+        }
+
+        @include media.min-width(l) {
+            @include col-5-4;
+        }
+
+        @include media.min-width(xl) {
+            @include col-8-4;
+        }
+    }
+}

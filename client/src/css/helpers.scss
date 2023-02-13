@@ -1,0 +1,36 @@
+@mixin underline {
+    text-decoration: underline;
+}
+
+@mixin center {
+    text-align: center;
+}
+
+@mixin upper {
+    text-transform: uppercase;
+}
+
+@mixin align-right {
+    text-align: right;
+}
+
+@mixin align-left {
+    text-align: left;
+}
+
+@mixin decoration-none {
+    text-decoration: none;
+}
+
+@mixin center-y-ML {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@mixin align-right-ML {
+    text-align: right;
+}
+
+@mixin align-left-L {
+    text-align: left;
+}

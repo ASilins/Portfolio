@@ -1,0 +1,47 @@
+@use "../../css/media.scss";
+@import "../../css/grid.scss";
+@import "../../css/helpers.scss";
+
+.carousel {
+
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        position: absolute;
+        background-color: white;
+        border: black solid 2px;
+        height: 40vh;
+        width: 320px;
+    }
+
+    .card--left {
+        transform: translateX(-320px) translateY(60px) rotate(-30deg) scale(0.9);
+    }
+
+    .card--right {
+        transform: translateX(320px) translateY(60px) rotate(30deg) scale(0.9);
+    }
+
+    .card--active {
+        z-index: 1;
+        transform: scale(1);
+    }
+
+    display: flex;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {}
+
+    @include media.min-width(ml) {}
+
+    @include media.min-width(l) {}
+
+    @include media.min-width(xl) {
+        @include col-1-12;
+        @include row-2-3;
+    }
+}

@@ -1,0 +1,103 @@
+@use "../../css/media.scss";
+@import "../../css/grid.scss";
+@import "../../css/helpers.scss";
+
+#logo {
+    font-weight: 700;
+    font-size: 48px;
+
+    width: fit-content;
+    height: fit-content;
+
+    // mix-blend-mode: difference;
+
+    @include media.min-width(ms) {
+        font-size: 54px;
+    }
+}
+
+/* 
+Mix blend mode difference
+background transparent
+*/
+
+header {
+    position: fixed;
+    margin-top: 40px;
+    margin-left: 40px;
+    z-index: 1;
+
+    button {
+        margin-top: 15px;
+        background-color: transparent;
+        border: 0;
+
+        cursor: pointer;
+    }
+
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {
+        margin-top: 60px;
+        margin-left: 80px;
+    }
+
+    @include media.min-width(ml) {
+        margin-top: 70px;
+        margin-left: 100px;
+    }
+
+    @include media.min-width(l) {
+        margin-left: 140px;
+    }
+
+    @include media.min-width(xl) {}
+}
+
+nav ul {
+    list-style: none;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+#desktop {
+    display: none;
+    margin-top: 2px;
+
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {}
+
+    @include media.min-width(ml) {}
+
+    @include media.min-width(l) {
+        display: block;
+    }
+
+    @include media.min-width(xl) {}
+}
+
+#mobile {
+    @include media.min-width(s) {}
+
+    @include media.min-width(ms) {}
+
+    @include media.min-width(m) {}
+
+    @include media.min-width(ml) {}
+
+    @include media.min-width(l) {
+        display: none;
+    }
+
+    @include media.min-width(xl) {}
+}
