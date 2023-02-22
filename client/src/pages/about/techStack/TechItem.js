@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import useIntersection from "../../../hooks/useIntersection";
 
 import "./techStack.scss";
@@ -8,12 +8,12 @@ function TechItem(props) {
         threshold: 0.9,
     });
 
-    const [img, setImg] = useState();
+    // const [img, setImg] = useState();
 
-    useEffect(() => {
-        fetch(props.img).then(response => response.blob())
-            .then(imgBlob => setImg(imgBlob));
-    }, []);
+    // useEffect(() => {
+    //     fetch(props.img).then(response => response.blob())
+    //         .then(imgBlob => setImg(imgBlob));
+    // }, []);
 
     const className = observed ? "techAnimation" : "hidden";
 

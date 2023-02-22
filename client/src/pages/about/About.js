@@ -2,7 +2,6 @@ import HeaderAnimation from "../../animations/HeaderAnimation";
 import TextAnimation from "../../animations/TextAnimation";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
-import Hobbies from "./hobbies/Hobbies";
 import PageNumber from "../../components/PageNumber";
 import TechStack from "./techStack/TechStack";
 import PageTransition from "../../animations/PageTransition";
