@@ -22,7 +22,7 @@ function UnderConstruction() {
             </h1>
             <p id="release">
                 <TextAnimation>
-                    Planned release: 20/02/2023
+                    Planned release: 21/02/2023
                 </TextAnimation>
             </p>
         </div>

@@ -1,21 +1,23 @@
-import "./home.scss"
-import Header from "../../components/header/Header";
-import imgArturs from "../../assets/arturs.jpg"
 import { Link } from "react-router-dom";
-import Showcase from "../../components/projectShowcase/Showcase";
+
+import imgArturs from "../../assets/arturs.jpg"
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 import PageNumber from "../../components/PageNumber";
 import TextAnimation from "../../animations/TextAnimation";
 import HeaderAnimation from "../../animations/HeaderAnimation";
+import ShowcaseList from "../../components/projectShowcase/ShowcaseList";
 
-function Home() {
+import "./home.scss"
+import WorkHeader from "../../components/workHeader/WorkHeader";
+import PageTransition from "../../animations/PageTransition";
+
+
+function Home(props) {
     document.title = "Arturs Silins | Home";
 
     return (
-        <>
-            <Header />
-
+        <PageTransition>
             <div id="home1" className="container">
                 <h1 id="home-item-1">
                     <HeaderAnimation>
@@ -85,18 +87,19 @@ function Home() {
                     <PageNumber id="home-item-10">
                         <h3>/02</h3>
                     </PageNumber>
-                    <div id="home-item-11">
+                    {/* <div id="home-item-11">
                         <h1>Work</h1>
-                    </div>
+                    </div> */}
+                    <WorkHeader />
                 </div>
 
-                <Showcase id="1" />
+                <ShowcaseList data={props.data} />
             </div>
 
             <Contact pageNumber="Contact /03" />
 
             <Footer />
-        </>
+        </PageTransition>
     )
 }
 

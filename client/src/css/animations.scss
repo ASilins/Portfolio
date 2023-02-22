@@ -18,7 +18,7 @@
 
     100% {
         opacity: 1;
-        transform: translateY(0) skewX(0);
+        transform: translateY(0);
     }
 }
 
@@ -35,6 +35,15 @@
         animation-duration: 2s;
         animation-fill-mode: forwards;
     }
+
+    opacity: 0;
+
+    display: inline-block;
+    white-space: pre;
+
+    animation-name: headerAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes headerAnimation {
@@ -70,5 +79,26 @@
     100% {
         opacity: 1;
         transform: translateY(0) skewX(0);
+    }
+}
+
+.techAnimation {
+    opacity: 0;
+    transform: translateX(50%);
+
+    animation-name: techAnimation;
+    animation-duration: 2s;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes techAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
     }
 }

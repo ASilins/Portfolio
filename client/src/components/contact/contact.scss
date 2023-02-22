@@ -3,7 +3,7 @@
 @import "../../css/helpers.scss";
 
 #contact {
-    height: 100vh;
+    height: 60rem;
 }
 
 #contact-item-1 {
@@ -60,11 +60,9 @@
     }
 }
 
-#email {
+.email {
     @include row-5-2;
     @include col-1-4;
-
-    @include underline;
 
     @include media.min-width(s) {}
 

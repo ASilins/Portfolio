@@ -47,10 +47,13 @@ export const Image = ({
 
         if (clamp) {
             setΔY(clampVal(deltaY, -diff, 0));
+
         } else {
             setΔY(deltaY);
         }
     });
+
+
 
     return (
         <div ref={box} className="image-box" style={{ height: height || undefined }}>

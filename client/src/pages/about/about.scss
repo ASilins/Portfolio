@@ -2,9 +2,18 @@
 @import "../../css/grid.scss";
 @import "../../css/helpers.scss";
 
+.temp {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 25rem;
+}
+
 #aboutTop {
     padding-top: 30vh;
-    height: 140vh;
+    height: 82rem;
 
     #item-1 {
         @include col-1-4;
