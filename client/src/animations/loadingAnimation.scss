@@ -197,7 +197,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
     40% {
         -webkit-transform: translateX(-75%);
 
-        -webkit-width: 0;
+        width: 0;
     }
 
     60% {
@@ -207,7 +207,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     100% {
         -webkit-transform: translateX(-50%);
-        -webkit-width: 213px;
+        width: 213px;
     }
 }
 
@@ -239,7 +239,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 @-webkit-keyframes textRight {
     0% {
         -webkit-transform: translateX(-50%);
-        -webkit-width: 213px;
+        width: 213px;
     }
 
     50% {
@@ -248,14 +248,14 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     80% {
         -webkit-transform: translateX(-95%);
-        -webkit-width: 0;
+        width: 0;
     }
 
     85% {
-        -webkit-width: 0;
+        width: 0;
     }
 
     100% {
-        -webkit-width: 0;
+        width: 0;
     }
 }
