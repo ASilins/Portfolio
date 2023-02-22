@@ -60,6 +60,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 .animationLogo {
     display: block;
     opacity: 0;
+    -webkit-opacity: 0;
 
     animation: animationLogo $step2 cubic-bezier(.43, .17, .23, .95) $logoDelay 1 forwards;
     -webkit-animation: animationLogo $step2 cubic-bezier(.43, .17, .23, .95) $logoDelay 1 forwards;
@@ -68,6 +69,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 .animationSlash {
     display: block;
     opacity: 0;
+    -webkit-opacity: 0;
 
     transform: translateX(-600%);
     -webkit-transform: translateX(-600%);
