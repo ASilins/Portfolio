@@ -1,20 +1,32 @@
 import { Link } from "react-router-dom";
-import { CSSTransition } from 'react-transition-group';
-
 import { useState } from "react";
-import burgerMenu from "../../assets/burger-menu.svg"
-import burgerMenuSelected from "../../assets/burger-menu-selected.svg"
+
 import "./Header.scss"
 
-
 function Header() {
-    const [isOpen, setIsOpen] = useState(false);
+
+    const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
+    const [menu_class, setMenuClass] = useState("menu hidden")
+    const [isMenuClicked, setIsMenuClicked] = useState(false)
+
+    // toggle burger menu change
+    const updateMenu = () => {
+        if (!isMenuClicked) {
+            setBurgerClass("burger-bar clicked")
+            setMenuClass("menu menu-visible")
+        }
+        else {
+            setBurgerClass("burger-bar unclicked")
+            setMenuClass("menu menu-hidden")
+        }
+        setIsMenuClicked(!isMenuClicked)
+    }
 
     return (
         <header>
-            <Link to="/" id="logo" className="nav-item">/AS</Link>
+            <Link to="/" id="logo">/AS</Link>
             <br />
-            <nav id="desktop">
+            <nav className="desktop">
                 <ul>
                     <li>
                         <Link className="nav-item" to="/work" >Work</Link>
@@ -27,37 +39,34 @@ function Header() {
                     </li>
                 </ul>
             </nav>
-            <div id="mobile">
-                <button onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ?
-                        <img id="mobile" src={burgerMenuSelected} alt="Burger menu" /> :
-                        <img id="mobile" src={burgerMenu} alt="Burger menu" />
-                    }
-                </button>
+            <div className="mobile">
 
-                <CSSTransition
-                    in={isOpen}
-                    timeout={300}
-                    classNames="menu"
-                    unmountOnExit
-                >
+                <nav>
+                    <div className="burger-menu" onClick={updateMenu}>
+                        <div className={burger_class} ></div>
+                        <div className={burger_class} ></div>
+                        <div className={burger_class} ></div>
+                    </div>
+                </nav>
+
+                <div className={menu_class}>
                     <nav>
                         <ul>
                             <li>
-                                <Link className="nav-item" to="/work" >Work</Link>
+                                <Link className="nav-item" to="/work" onClick={updateMenu}>Work</Link>
                             </li>
                             <li>
-                                <Link className="nav-item" to="/about" >About</Link>
+                                <Link className="nav-item" to="/about" onClick={updateMenu}>About</Link>
                             </li>
                             <li>
-                                <Link className="nav-item" to="/contact" >Contact</Link>
+                                <Link className="nav-item" to="/contact" onClick={updateMenu}>Contact</Link>
                             </li>
                         </ul>
                     </nav>
-                </CSSTransition>
+                </div>
             </div>
 
-        </header>
+        </header >
 
     )
 }

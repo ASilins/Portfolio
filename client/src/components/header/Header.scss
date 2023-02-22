@@ -1,6 +1,6 @@
 @use "../../css/media.scss";
-@import "../../css/grid.scss";
-@import "../../css/helpers.scss";
+@use "../../css/grid.scss";
+@use "../../css/helpers.scss";
 
 #logo {
     font-weight: 700;
@@ -9,6 +9,9 @@
     width: fit-content;
     height: fit-content;
 
+    text-decoration: none;
+    color: black;
+
     // mix-blend-mode: difference;
 
     @include media.min-width(ms) {
@@ -16,29 +19,11 @@
     }
 }
 
-/* 
-Mix blend mode difference
-background transparent
-*/
-
 header {
     position: fixed;
     margin-top: 40px;
     margin-left: 40px;
     z-index: 1;
-
-    button {
-        margin-top: 15px;
-        background-color: transparent;
-        border: 0;
-
-        cursor: pointer;
-    }
-
-
-    @include media.min-width(s) {}
-
-    @include media.min-width(ms) {}
 
     @include media.min-width(m) {
         margin-top: 60px;
@@ -53,8 +38,6 @@ header {
     @include media.min-width(l) {
         margin-left: 140px;
     }
-
-    @include media.min-width(xl) {}
 }
 
 nav ul {
@@ -65,28 +48,123 @@ nav ul {
     text-decoration: none;
     color: black;
     font-size: 14px;
+    transition: 500ms;
 }
 
-#desktop {
+.nav-item:hover {
+    text-decoration: underline;
+    color: rgb(72, 72, 72);
+}
+
+.desktop {
     display: none;
     margin-top: 2px;
-
-    @include media.min-width(s) {}
-
-    @include media.min-width(ms) {}
-
-    @include media.min-width(m) {}
-
-    @include media.min-width(ml) {}
 
     @include media.min-width(l) {
         display: block;
     }
-
-    @include media.min-width(xl) {}
 }
 
-#mobile {
+.mobile {
+    .burger-menu {
+        margin-top: 5px;
+        height: 20px;
+        width: 4em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .burger-bar {
+        width: 32px;
+        height: 4px;
+        background-color: black;
+        border-radius: 0.5rem;
+    }
+
+    .burger-bar:nth-child(2) {
+        width: 28px;
+    }
+
+    .menu {
+        background-color: #F4E2C0;
+
+        width: 60vw;
+        height: 80vh;
+        position: absolute;
+        top: 100px;
+        z-index: -1;
+    }
+
+    .menu-visible {
+        display: inherit;
+
+        animation-name: menuSlidein;
+        animation-duration: 1.85s;
+        animation-timing-function: cubic-bezier(.55, -0.01, .47, 1.01);
+    }
+
+    .menu-hidden {
+        animation-name: menuSlideout;
+        animation-duration: 1.85s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.55, -0.01, .47, 1.01);
+    }
+
+    .nav-item {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    li {
+        margin: 5rem 0;
+    }
+
+    /* ----- animations--------- */
+    /* clicked */
+    .burger-bar.clicked:nth-child(1) {
+        transform: rotate(45deg) translate(4.7px, 6px);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.clicked:nth-child(2) {
+        transform: scale(0.1);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.clicked:nth-child(3) {
+        transform: rotate(135deg) translate(-5px, 7px);
+        transition: ease-out 0.5s;
+    }
+
+    /* unclicked */
+    .burger-bar.unclicked {
+        transform: rotate(0) translate(0);
+        transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.65s;
+    }
+
+    @keyframes menuSlidein {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes menuSlideout {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
     @include media.min-width(s) {}
 
     @include media.min-width(ms) {}

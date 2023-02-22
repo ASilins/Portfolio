@@ -1,0 +1,159 @@
+$step1-delay: 200ms;
+$step1: 0.65s;
+$step2-delay: 1.5s;
+$step2: 0.8s;
+$logoDelay: $step1 + $step1-delay + $step2-delay;
+
+
+
+.preLoader {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background-color: rgb(11, 11, 11);
+}
+
+.logoAnimation {
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+    background-color: rgb(11, 11, 11);
+
+    animation: mainAnimation 1s 5s 1 forwards;
+}
+
+.logoAnimation span {
+    position: absolute;
+
+    color: #F4E2C0;
+    font-weight: 600;
+    font-size: 36px;
+
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+.animationText {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+
+    transform: translateX(50%);
+
+    animation: textLeft $step1 linear $step1-delay 1 forwards,
+        textRight $step2 linear $step2-delay 1 forwards;
+}
+
+.animationLogo {
+    display: block;
+    opacity: 0;
+
+    animation: animationLogo $step2 cubic-bezier(.43, .17, .23, .95) $logoDelay 1 forwards;
+}
+
+.animationSlash {
+    display: block;
+    transform: translateX(-600%);
+    opacity: 0;
+
+    animation: slashRight $step1 $step1-delay linear 1 forwards,
+        slashLeft $step2 $step2-delay linear 1 forwards;
+}
+
+@keyframes mainAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes slashRight {
+    0% {
+        transform: translateX(-600%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(780%);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slashLeft {
+    0% {
+        transform: translateX(780%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-260%);
+        opacity: 1;
+    }
+}
+
+@keyframes animationLogo {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes textLeft {
+    0% {}
+
+    40% {
+        transform: translateX(-75%);
+
+        width: 0;
+    }
+
+    60% {
+        transform: translateX(-60%);
+
+    }
+
+    100% {
+        transform: translateX(-50%);
+        width: 213px;
+    }
+}
+
+@keyframes textRight {
+    0% {
+        transform: translateX(-50%);
+        width: 213px;
+    }
+
+    50% {
+        transform: translateX(-55%);
+    }
+
+    80% {
+        transform: translateX(-95%);
+        width: 0;
+    }
+
+    85% {
+        width: 0;
+    }
+
+    100% {
+        width: 0;
+    }
+}

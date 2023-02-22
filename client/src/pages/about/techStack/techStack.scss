@@ -1,15 +1,21 @@
-@use "../../css/media.scss";
-@import "../../css/grid.scss";
-@import "../../css/helpers.scss";
+@use "../../../css/media.scss";
+@import "../../../css/grid.scss";
+@import "../../../css/helpers.scss";
 
 #techStack {
     h1 {
         @include col-2-2;
         @include row-1;
 
+        height: 8rem;
+
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include media.min-width(m) {
+            height: 15rem;
+        }
 
         @include media.min-width(l) {
             @include col-3-4;
@@ -47,20 +53,11 @@
 }
 
 #techItem {
-    // Dont like how this looks
-
-    // background-color: #fdeac7;
-
-    // box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.17);
-    // -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.17);
-    // -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.17);
-
-    // border-radius: 5px;
-
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    height: 5vh;
+    height: 5rem;
     margin-bottom: 20px;
 
     @include media.min-width(s) {}
@@ -77,6 +74,23 @@
 
     p {
         margin-left: 8px;
+
+        @include media.min-width(s) {}
+
+        @include media.min-width(ms) {}
+
+        @include media.min-width(m) {}
+
+        @include media.min-width(ml) {}
+
+        @include media.min-width(l) {}
+
+        @include media.min-width(xl) {}
+    }
+
+    img {
+        max-height: 32px;
+        width: auto;
 
         @include media.min-width(s) {}
 

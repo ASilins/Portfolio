@@ -1,15 +1,20 @@
+import { useState } from "react";
+
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
-import Showcase from "../../components/projectShowcase/Showcase";
 import WorkHeader from "../../components/workHeader/WorkHeader";
-import { useState } from "react";
-import "./work.scss";
 import PageNumber from "../../components/PageNumber";
 import TextAnimation from "../../animations/TextAnimation";
 
-function Work() {
+import "./work.scss";
+import ShowcaseList from "../../components/projectShowcase/ShowcaseList";
+import PageTransition from "../../animations/PageTransition";
+
+function Work(props) {
     document.title = "Arturs Silins | Work";
+
+    const projNr = props.projects.length;
+    const labNr = props.labs.length;
 
     const [option, setOption] = useState("Project");
 
@@ -23,8 +28,7 @@ function Work() {
         "Selection of small projects that I have made in my spare time to learn new things.";
 
     return (
-        <>
-            <Header />
+        <PageTransition>
             <WorkHeader />
             <div className="container" id="info">
                 <PageNumber>
@@ -38,7 +42,7 @@ function Work() {
                     </h1>
                     <h4>
                         <TextAnimation>
-                            /0#
+                            /0{projNr}
                         </TextAnimation>
                     </h4>
                 </div>
@@ -49,7 +53,7 @@ function Work() {
                         </TextAnimation>
                     </h1>
                     <h4><TextAnimation>
-                        /0#
+                        /0{labNr}
                     </TextAnimation></h4>
                 </div>
                 <p>
@@ -64,16 +68,15 @@ function Work() {
                 </p>
             </div>
             {option === "Project" ?
-                <Showcase id="1" /> :
+                <ShowcaseList data={props.projects} /> :
                 <>
-                    <Showcase id="1" />
-                    <Showcase id="1" />
+                    <ShowcaseList data={props.labs} />
                 </>
             }
 
             <Contact pageNumber="Contact /02" />
             <Footer />
-        </>
+        </PageTransition>
     );
 }
 

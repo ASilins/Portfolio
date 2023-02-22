@@ -1,4 +1,4 @@
-import PageNumber from "../PageNumber";
+import PageNumber from "../../../components/PageNumber";
 import Carousel from "../carousel/Carousel";
 import "./hobbies.scss";
 

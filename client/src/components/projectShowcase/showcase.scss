@@ -4,79 +4,70 @@
 
 $padding-r: 40px;
 
-#showcase {
-    height: auto;
-}
+.showcase {
+    position: relative;
+    margin-bottom: 10rem;
 
-#sc-text {
-    h1 {
-        @include underline;
+    .scroll {
+        position: absolute;
+
+        max-width: 30vw;
     }
 
-    h2 {
-        padding-left: 20vw;
-    }
+    .sc-text {
+        height: 100%;
 
-    @include align-right;
+        @include col-1-4;
+        @include row-1-2;
 
-    @include col-1-4;
-    @include row-1-2;
-
-    @include media.min-width(s) {}
-
-    @include media.min-width(ms) {}
-
-    @include media.min-width(m) {
-        @include row-1;
-    }
-
-    @include media.min-width(ml) {
-        padding-right: $padding-r;
-    }
-
-    @include media.min-width(l) {
-        h2 {
-            padding-left: 10vw;
+        @include media.min-width(m) {
+            @include row-1;
         }
 
-        @include col-5-4;
-        padding-right: 0;
+        @include media.min-width(ml) {
+            padding-right: $padding-r;
+
+            height: 45rem;
+        }
+
+        @include media.min-width(l) {
+            @include row-1-4;
+            @include col-1-4;
+        }
+
+        @include media.min-width(xl) {
+
+            @include col-2-5;
+        }
     }
 
-    @include media.min-width(xl) {
-        @include col-8-4;
-    }
-}
+    .sc-item-3 {
+        @include col-1-4;
+        @include row-3-6;
 
-#sc-item-3 {
+        height: 35rem;
 
-    @include col-1-4;
-    @include row-3-6;
+        @include media.min-width(ms) {
+            height: 40rem;
+        }
 
-    height: 70vh;
+        @include media.min-width(m) {
+            @include row-2-5;
+        }
 
-    @include media.min-width(s) {}
+        @include media.min-width(ml) {
+            @include row-2-3;
 
-    @include media.min-width(ms) {}
+            height: 45rem;
+        }
 
-    @include media.min-width(m) {
-        @include row-2-5;
-    }
+        @include media.min-width(l) {
+            @include row-1-4;
+            @include col-5-4;
+        }
 
-    @include media.min-width(ml) {
-        @include row-2-3;
-
-        padding-left: $padding-r;
-        padding-right: $padding-r;
-
-        height: 60vh;
-    }
-
-    @include media.min-width(l) {
-        @include row-1-4;
-    }
-
-    @include media.min-width(xl) {
-        @include col-2-5;
+        @include media.min-width(xl) {
+            @include col-8-4;
+        }
     }
 }

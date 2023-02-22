@@ -1,33 +1,33 @@
 const express = require('express');
 const router = express.Router();
-const Projects = require('../models/projectShema')
+const Labs = require('../models/projectShema')
 
 
 router.get('/', async (req, res) => {
     try {
-        const projects = await Projects.find({ type: "Project" });
-        res.json(projects);
+        const labs = await Labs.find({ type: "Lab" });
+        res.json(labs);
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
 });
 
-router.get('/:id', getProject, (req, res) => {
-    res.json(res.project);
+router.get('/:id', getLab, (req, res) => {
+    res.json(res.lab);
 });
 
-async function getProject(req, res, next) {
+async function getLab(req, res, next) {
     let project
     try {
-        project = await Projects.findById(req.params.id);
-        if (project == null) {
+        lab = await Labs.findById(req.params.id);
+        if (lab == null) {
             return res.status(404).json({ message: 'Cannot find project' });
         }
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
 
-    res.project = project;
+    res.lab = lab;
     next();
 }
 

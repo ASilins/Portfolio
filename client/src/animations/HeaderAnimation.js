@@ -6,15 +6,11 @@ function HeaderAnimation(props) {
         threshold: 0.8,
     });
 
-    const array = props.children.toString().split("");
-
     const className = observed ? "headerAnimation" : "hidden";
 
     return (
         <span ref={ref} className={`${className} ${props.className}`}>
-            {array.map((item, index) => (
-                <span key={index}>{item}</span>
-            ))}
+            {props.children}
         </span>
     );
 }
