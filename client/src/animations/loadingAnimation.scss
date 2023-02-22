@@ -46,6 +46,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
     display: block;
     overflow: hidden;
     width: 0;
+    -webkit-width: 0;
     white-space: nowrap;
 
     transform: translateX(50%);
@@ -197,7 +198,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
     40% {
         -webkit-transform: translateX(-75%);
 
-        width: 0;
+        -webkit-width: 0;
     }
 
     60% {
@@ -207,7 +208,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     100% {
         -webkit-transform: translateX(-50%);
-        width: 213px;
+        -webkit-width: 213px;
     }
 }
 
@@ -239,7 +240,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 @-webkit-keyframes textRight {
     0% {
         -webkit-transform: translateX(-50%);
-        width: 213px;
+        -webkit-width: 213px;
     }
 
     50% {
@@ -248,14 +249,14 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     80% {
         -webkit-transform: translateX(-95%);
-        width: 0;
+        -webkit-width: 0;
     }
 
     85% {
-        width: 0;
+        -webkit-width: 0;
     }
 
     100% {
-        width: 0;
+        -webkit-width: 0;
     }
 }
