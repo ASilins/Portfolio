@@ -50,6 +50,10 @@
     :nth-child(3) {
         display: inline-flex;
 
+        h1 {
+            cursor: pointer;
+        }
+
         h4 {
             margin: 5px 0 0 10px;
 

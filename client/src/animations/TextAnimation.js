@@ -9,7 +9,7 @@ function TextAnimation(props) {
     const className = observed ? "textAnimation" : "hidden";
 
     return (
-        <span ref={ref} className={`${className} ${props.className}`}>
+        <span ref={ref} className={`${className} ${props.className}`} style={props.style}>
             {props.children}
         </span>
     );
