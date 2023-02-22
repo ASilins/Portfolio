@@ -20,7 +20,7 @@ function TechItem(props) {
     return (
         <div ref={ref} className={className} id="techItem">
             <p>{props.name}</p>
-            <img src={require("../../../assets/react.png")} alt="" />
+            <img src="" alt="" />
         </div>
     );
 }

@@ -25,6 +25,10 @@ header {
     margin-left: 40px;
     z-index: 1;
 
+    opacity: 0;
+
+    animation: headerAnimation 1s forwards;
+
     @include media.min-width(m) {
         margin-top: 60px;
         margin-left: 80px;
@@ -37,6 +41,16 @@ header {
 
     @include media.min-width(l) {
         margin-left: 140px;
+    }
+}
+
+@keyframes headerAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -148,34 +162,29 @@ nav ul {
     @keyframes menuSlidein {
         0% {
             transform: translateX(-100%);
+            opacity: 0;
         }
 
         100% {
             transform: translateX(0%);
+            opacity: 1;
         }
     }
 
     @keyframes menuSlideout {
         0% {
             transform: translateX(0%);
+            opacity: 1;
         }
 
         100% {
             transform: translateX(-100%);
+            opacity: 0;
         }
     }
-
-    @include media.min-width(s) {}
-
-    @include media.min-width(ms) {}
-
-    @include media.min-width(m) {}
-
-    @include media.min-width(ml) {}
 
     @include media.min-width(l) {
         display: none;
     }
 
-    @include media.min-width(xl) {}
 }

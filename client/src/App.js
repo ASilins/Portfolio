@@ -75,8 +75,8 @@ function App() {
             <Header />
             <AnimatePresence>
               <Routes location={location} key={location.pathname}>
-                <Route path='/' element={<UnderConstruction />} />
-                <Route path='/home' element={<Home data={showcase} />} />
+                <Route path='/underconstruction' element={<UnderConstruction />} />
+                <Route path='/' element={<Home data={showcase} />} />
                 <Route path="/work" element={<Work labs={labs} projects={projects} />} />
                 <Route path="/about" element={<About data={techStack} />} />
                 <Route path="/contact" element={<ContactPage />} />
