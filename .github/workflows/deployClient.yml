@@ -1,6 +1,6 @@
 on: 
 push:
-branches: main
+branches: master
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-    working-directory: ./client
       uses: actions/checkout@v3
 
     - name: Use Node.js 16
