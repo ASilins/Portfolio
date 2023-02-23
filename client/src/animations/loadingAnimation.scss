@@ -28,12 +28,15 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
     overflow: hidden;
     background-color: rgb(11, 11, 11);
 
-    // animation: mainAnimation 1s 5s 1 forwards;
-    // -webkit-animation: mainAnimation 1s 5s 1 forwards;
+    animation: mainAnimation 1s 5s 1 forwards;
+    -webkit-animation: mainAnimation 1s 5s 1 forwards;
 }
 
 .logoAnimation h1 {
     position: absolute;
+
+    will-change: transform, width, transition;
+
 
     color: #F4E2C0;
     font-weight: 600;
@@ -59,7 +62,6 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     transform: translate3d(50%, 0, 0);
     -webkit-transform: translate3d(50%, 0, 0);
-    will-change: transform, width, transition;
 
     animation: textLeft $step1 linear $step1-delay 1 forwards,
         textRight $step2 linear $step2-delay 1 forwards;
