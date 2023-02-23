@@ -50,7 +50,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     transform: translateX(50%);
     -webkit-transform: translateX(50%);
-    will-change: transform;
+    will-change: transform, width;
 
     animation: textLeft $step1 linear $step1-delay 1 forwards,
         textRight $step2 linear $step2-delay 1 forwards;
