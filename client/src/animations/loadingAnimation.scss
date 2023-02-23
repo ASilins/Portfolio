@@ -188,7 +188,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     100% {
         transform: translate3d(-50%, 0, 0);
-        width: 213px;
+        width: 13.3rem;
     }
 }
 
@@ -208,14 +208,14 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
     100% {
         -webkit-transform: translate3d(-50%, 0, 0);
-        width: 213px;
+        width: 13.3rem;
     }
 }
 
 @keyframes textRight {
     0% {
         transform: translate3d(-50%, 0, 0);
-        width: 213px;
+        width: 13.3rem;
     }
 
     50% {
@@ -240,7 +240,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 @-webkit-keyframes textRight {
     0% {
         -webkit-transform: translate3d(-50%, 0, 0);
-        width: 213px;
+        width: 13.3rem;
     }
 
     50% {
