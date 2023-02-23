@@ -55,7 +55,6 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 }
 
 .animationText {
-    display: block;
     overflow: hidden;
     width: 0;
     white-space: nowrap;
@@ -70,7 +69,6 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 }
 
 .animationLogo {
-    display: block;
     opacity: 0;
     -webkit-opacity: 0;
 
@@ -79,7 +77,6 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 }
 
 .animationSlash {
-    display: block;
     opacity: 0;
     -webkit-opacity: 0;
 
