@@ -49,7 +49,7 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
     white-space: nowrap;
 
     transform: translateX(50%);
-    -webkit-transform: translateX(50%);
+    -webkit-transform: translate3d(50%, 0, 0);
     will-change: transform, width;
 
     animation: textLeft $step1 linear $step1-delay 1 forwards,
@@ -196,18 +196,18 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
     0% {}
 
     40% {
-        -webkit-transform: translate(-75%, 0);
+        -webkit-transform: translate3d(-75%, 0, 0);
 
         width: 0;
     }
 
     60% {
-        -webkit-transform: translate(-60%, 0);
+        -webkit-transform: translate3d(-60%, 0, 0);
 
     }
 
     100% {
-        -webkit-transform: translate(-50%, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
         width: 213px;
     }
 }
@@ -239,16 +239,16 @@ $logoDelay: $step1 + $step1-delay + $step2-delay;
 
 @-webkit-keyframes textRight {
     0% {
-        -webkit-transform: translate(-50%, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
         width: 213px;
     }
 
     50% {
-        -webkit-transform: translate(-55%, 0);
+        -webkit-transform: translate3d(-55%, 0, 0);
     }
 
     80% {
-        -webkit-transform: translate(-95%, 0);
+        -webkit-transform: translate3d(-95%, 0, 0);
         width: 0;
     }
 
