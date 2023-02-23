@@ -19,7 +19,7 @@ function TechStack(props) {
         <>
             <div className="container" id="techStack">
                 <PageNumber>
-                    <h3>/02</h3>
+                    /02
                 </PageNumber>
 
                 <h1>

@@ -42,7 +42,7 @@ function Home(props) {
             <div className="container">
 
                 <PageNumber>
-                    <h3 >About me /01</h3>
+                    About me /01
                 </PageNumber>
 
                 <div id="home-item-5-6">
@@ -85,7 +85,7 @@ function Home(props) {
             <div id="home3">
                 <div id="work">
                     <PageNumber id="home-item-10">
-                        <h3>/02</h3>
+                        /02
                     </PageNumber>
                     {/* <div id="home-item-11">
                         <h1>Work</h1>

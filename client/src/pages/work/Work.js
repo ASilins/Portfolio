@@ -32,7 +32,7 @@ function Work(props) {
             <WorkHeader />
             <div className="container" id="info">
                 <PageNumber>
-                    <h3>/01</h3>
+                    /01
                 </PageNumber>
                 <div>
                     <h1 onClick={() => handleClick("Project")}>

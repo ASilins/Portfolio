@@ -14,7 +14,7 @@ function About(props) {
         <PageTransition>
             <div className="container" id="aboutTop">
                 <PageNumber>
-                    <h3>/01</h3>
+                    /01
                 </PageNumber>
                 <h1 id="item-1">
                     <HeaderAnimation>

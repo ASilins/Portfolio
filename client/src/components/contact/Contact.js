@@ -11,7 +11,7 @@ function Contact(props) {
         <>
             <div className="container" id="contact">
                 <PageNumber>
-                    <h3>{props.pageNumber}</h3>
+                    {props.pageNumber}
                 </PageNumber>
                 <h1 id="contact-item-1">
                     <TextAnimation className="underline">
