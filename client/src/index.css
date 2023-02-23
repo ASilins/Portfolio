@@ -39,6 +39,7 @@ p {
 
 .hidden {
   opacity: 0;
+  -webkit-opacity: 0;
 }
 
 .underline {
