@@ -8,7 +8,6 @@ import UnderConstruction from './pages/underConstruction/UnderConstruction';
 import ContactPage from './pages/contact/ContactPage';
 import Work from './pages/work/Work';
 import About from './pages/about/About';
-import Header from './components/header/Header';
 import LoadingAnimation from './animations/LoadingAnimation';
 
 function App() {
