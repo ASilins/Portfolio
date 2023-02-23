@@ -18,9 +18,9 @@ function LoadingAnimation(props) {
     } else {
         return (
             <div className="logoAnimation">
-                <span className='animationText'>Arturs Silins</span>
-                <span className='animationLogo'>AS</span>
-                <span className='animationSlash'>/</span>
+                <h1 className='animationText'>Arturs Silins</h1>
+                <h1 className='animationLogo'>AS</h1>
+                <h1 className='animationSlash'>/</h1>
             </div>
         )
     }

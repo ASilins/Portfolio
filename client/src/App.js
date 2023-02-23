@@ -79,6 +79,7 @@ function App() {
                 <Route path="/work" element={<Work labs={labs} projects={projects} />} />
                 <Route path="/about" element={<About data={techStack} />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path='/animation' element={<LoadingAnimation />} />
               </Routes>
             </AnimatePresence>
           </>
