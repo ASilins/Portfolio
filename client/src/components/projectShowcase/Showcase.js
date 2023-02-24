@@ -15,7 +15,7 @@ function Showcase(props) {
     let img;
 
     let fromTop = 100;
-    let imgSize = 35
+    let imgSize = 35;
 
     if (width >= 480 && width < 840) {
         imgSize = 40;
