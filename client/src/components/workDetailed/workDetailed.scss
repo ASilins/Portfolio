@@ -21,7 +21,8 @@
             h1,
             h2,
             p,
-            a {
+            a,
+            td {
                 color: #F4E2C0;
             }
         }
@@ -31,13 +32,19 @@
             margin-left: auto;
             margin-right: auto;
 
+            height: 45rem;
+
             @include media.min-width(s) {}
 
-            @include media.min-width(ms) {}
+            @include media.min-width(ms) {
+                height: 55rem;
+            }
 
             @include media.min-width(m) {}
 
-            @include media.min-width(ml) {}
+            @include media.min-width(ml) {
+                height: 60rem;
+            }
 
             @include media.min-width(l) {}
 
