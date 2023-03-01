@@ -1,0 +1,54 @@
+@use "../../css/media.scss";
+@use "../../css/grid.scss";
+@use "../../css/helpers.scss";
+
+.workDetailed {
+    position: absolute;
+    z-index: 4;
+
+    margin: 2rem;
+    width: calc(100vw - 4rem);
+
+    background-color: rgb(11, 11, 11);
+
+
+    div {
+        position: relative;
+        justify-content: center;
+
+        .container {
+
+            h1,
+            h2,
+            p,
+            a,
+            td {
+                color: #F4E2C0;
+            }
+        }
+
+        .workImageOne {
+            width: calc(100vh - 6rem);
+            margin-left: auto;
+            margin-right: auto;
+
+            height: 45rem;
+
+            @include media.min-width(s) {}
+
+            @include media.min-width(ms) {
+                height: 55rem;
+            }
+
+            @include media.min-width(m) {}
+
+            @include media.min-width(ml) {
+                height: 60rem;
+            }
+
+            @include media.min-width(l) {}
+
+            @include media.min-width(xl) {}
+        }
+    }
+}

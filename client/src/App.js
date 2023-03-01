@@ -10,6 +10,7 @@ import Work from './pages/work/Work';
 import About from './pages/about/About';
 import LoadingAnimation from './animations/LoadingAnimation';
 import Header from './components/header/Header';
+import WorkDetailed from './components/workDetailed/WorkDetailed';
 
 function App() {
 
@@ -80,6 +81,7 @@ function App() {
                 <Route path="/work" element={<Work labs={labs} projects={projects} />} />
                 <Route path="/about" element={<About data={techStack} />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path='/temp' element={<WorkDetailed />} />
               </Routes>
             </AnimatePresence>
           </>
