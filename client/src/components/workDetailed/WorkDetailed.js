@@ -6,15 +6,14 @@ function WorkDetailed() {
 
     const width = useScreenSize();
     let img = require("../../assets/default.jpg");
-    let imgSize = 35;
+    let imgSize = 45;
 
     if (width >= 480 && width < 840) {
-        imgSize = 40;
+        imgSize = 55;
     }
     else if (width >= 840) {
-        imgSize = 45;
+        imgSize = 60;
     }
-
     return (
         <div className="workDetailed">
             <div>
@@ -27,8 +26,18 @@ function WorkDetailed() {
                     </h2>
 
                 </div>
+
                 <div className="workImageOne">
-                    <Image src={img} alt="Project photo" height={`${imgSize}rem`} speed={0.4} />
+                    <Image src={img} alt="Project photo" height={`${imgSize}rem`} speed={0.2} />
+                </div>
+
+                <div className="container workDetails">
+                    <table>
+                        <tr>
+                            <td>Client</td>
+                            <td>Lorem Ipsum</td>
+                        </tr>
+                    </table>
                 </div>
 
             </div>

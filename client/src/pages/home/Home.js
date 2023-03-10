@@ -49,7 +49,7 @@ function Home(props) {
                     <h2>
                         <TextAnimation>
                             I am a student software technology engineer passionate
-                            in web development and creative design.
+                            in software development and creative design.
                         </TextAnimation>
                     </h2>
                     <h2>
