@@ -2,7 +2,7 @@ import useScreenSize from "../../hooks/useScreenSize";
 import { Image } from "../image/Image";
 import "./workDetailed.scss";
 
-function WorkDetailed(props) {
+function WorkDetailed() {
 
     const width = useScreenSize();
     let img = require("../../assets/default.jpg");
@@ -14,20 +14,6 @@ function WorkDetailed(props) {
     else if (width >= 840) {
         imgSize = 60;
     }
-
-    const data = [
-        { id: 1, name: 'Row 1', column2: 'Row 1, Column 2' },
-        { id: 2, name2: 'Row 2', column2: null },
-        { id: 3, name3: 'Row 3', column2: 'Row 3, Column 2' },
-    ];
-
-    // if (props.data.img === null) {
-    //     img = require("../../assets/default.jpg");
-    // }
-    // else {
-    //     img = props.data.img;
-    // }
-
     return (
         <div className="workDetailed">
             <div>
@@ -38,8 +24,6 @@ function WorkDetailed(props) {
                     <h2>
                         Project description
                     </h2>
-
-                    <p><a href="">Link to page</a></p>
 
                 </div>
 
